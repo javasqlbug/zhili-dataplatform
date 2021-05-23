@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.niezhili</groupId>
     <artifactId>zhili-dataservice-api</artifactId>
 
     <name>zhili-dataservice-api</name>
