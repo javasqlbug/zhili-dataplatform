@@ -1,0 +1,9 @@
+server:
+  servlet:
+    context-path: /dataservice
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: dataservice
