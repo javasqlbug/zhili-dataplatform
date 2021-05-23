@@ -11,7 +11,12 @@
 
   <groupId>com.niezhili</groupId>
   <artifactId>zhili-auth</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>zhili-auth-dao</module>
+    <module>zhili-auth-admin</module>
+  </modules>
 
   <name>zhili-auth</name>
   <!-- FIXME change it to the project's website -->
