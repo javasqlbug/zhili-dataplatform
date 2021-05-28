@@ -18,6 +18,8 @@
     <module>zhili-register</module>
     <module>zhili-collect</module>
     <module>zhili-ui</module>
+    <module>zhili-report</module>
+    <module>zhili-scheduler</module>
   </modules>
 
   <name>zhili-dataplatform</name>
