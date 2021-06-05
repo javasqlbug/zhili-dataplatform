@@ -14,10 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.niezhili.dataplatform.dataservice.dao;
 
-package com.niezhili.dataplatform.dataservice.admin.service;
+/**
+ * base dao
+ */
+public abstract class AbstractBaseDao {
 
-public interface ApplicationService {
+  /**
+   * init
+   */
+  protected abstract void init();
 
-    void test();
 }

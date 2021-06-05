@@ -18,8 +18,32 @@
 package com.niezhili.dataplatform.dataservice.admin.service.impl;
 
 import com.niezhili.dataplatform.dataservice.admin.service.ApplicationService;
+import com.niezhili.dataplatform.dataservice.dao.entity.Project;
+import com.niezhili.dataplatform.dataservice.dao.mapper.ProjectMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Date;
 
 @Service
 public class ApplicationServiceImpl implements ApplicationService {
+
+    @Autowired
+    private ProjectMapper projectMapper;
+
+    @Override
+    public void test() {
+        Date now = new Date();
+        Project project = Project
+                .newBuilder()
+                .name("测试项目")
+                .description("ssss")
+                .userId(111)
+                .userName("niezhili")
+                .createTime(now)
+                .updateTime(now)
+                .build();
+
+        projectMapper.insert(project);
+    }
 }

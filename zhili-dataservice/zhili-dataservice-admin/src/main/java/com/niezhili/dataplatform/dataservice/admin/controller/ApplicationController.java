@@ -18,6 +18,7 @@
 package com.niezhili.dataplatform.dataservice.admin.controller;
 
 import com.niezhili.dataplatform.dataservice.admin.service.ApplicationService;
+import com.niezhili.dataplatform.dataservice.admin.utils.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
@@ -42,10 +43,22 @@ public class ApplicationController extends BaseController {
     @Autowired
     private ApplicationService applicationService;
 
+    /**
+     * create data source
+     *
+     * @return create result code
+     */
+    @ApiOperation(value = "createDataSource", notes = "CREATE_DATA_SOURCE_NOTES")
+    @PostMapping(value = "/create")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Result createDataSource() {
+        applicationService.test();
+        return null;
+    }
+
     @ApiOperation(value = "列表", notes = "QUERY_ALERT_GROUP_LIST_NOTES")
     @GetMapping(value = "/list")
     @ResponseStatus(HttpStatus.OK)
-
     public void list() {
         System.out.println("测试");
     }

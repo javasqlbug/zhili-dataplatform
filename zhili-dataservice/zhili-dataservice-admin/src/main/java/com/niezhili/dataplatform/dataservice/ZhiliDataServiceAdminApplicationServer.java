@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.niezhili.dataplatform.dataservice.admin;
+package com.niezhili.dataplatform.dataservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -30,7 +30,7 @@ import org.springframework.context.annotation.FilterType;
  */
 @SpringBootApplication
 @ServletComponentScan
-@ComponentScan(value = "com.niezhili.dataplatform.dataservice",
+@ComponentScan(value = "com.niezhili.dataplatform",
         excludeFilters = @ComponentScan.Filter(type = FilterType.REGEX, pattern = "org.apache.dolphinscheduler.server.*"))
 public class ZhiliDataServiceAdminApplicationServer extends SpringBootServletInitializer {
 
