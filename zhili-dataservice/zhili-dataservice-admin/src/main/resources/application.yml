@@ -7,3 +7,6 @@ spring:
     active: dev
   application:
     name: dataservice
+
+logging:
+  config: classpath:logback-admin.xml
