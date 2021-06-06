@@ -1,0 +1,12 @@
+server:
+  servlet:
+    context-path: /report
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: dataservice
+
+logging:
+  config: classpath:logback-report.xml
