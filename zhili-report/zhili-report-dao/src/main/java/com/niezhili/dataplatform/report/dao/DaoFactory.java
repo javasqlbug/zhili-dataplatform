@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.niezhili.dataplatform.dataservice.dao;
+package com.niezhili.dataplatform.report.dao;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

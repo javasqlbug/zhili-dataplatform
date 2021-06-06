@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-package com.niezhili.dataplatform.dataservice.admin.controller;
+package com.niezhili.dataplatform.report.admin.controller;
 
-import com.niezhili.dataplatform.dataservice.admin.service.ApplicationService;
-import com.niezhili.dataplatform.dataservice.admin.utils.Result;
+import com.niezhili.dataplatform.report.admin.service.ReportService;
+import com.niezhili.dataplatform.report.admin.utils.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
@@ -30,25 +30,25 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * @author niezhili
- * @date 2021-05-29
- * 应用管理controller
+ * @date 2021-06-06
+ * 报表管理controller
  */
-@Api(tags = "应用管理")
+@Api(tags = "报表管理")
 @RestController
-@RequestMapping("application")
-public class ApplicationController extends BaseController {
+@RequestMapping("report")
+public class ReportController extends BaseController {
 
-    private static final Logger logger = LoggerFactory.getLogger(ApplicationController.class);
+    private static final Logger logger = LoggerFactory.getLogger(ReportController.class);
 
     @Autowired
-    private ApplicationService applicationService;
+    private ReportService applicationService;
 
     /**
      * create data source
      *
      * @return create result code
      */
-    @ApiOperation(value = "createDataSource", notes = "CREATE_DATA_SOURCE_NOTES")
+    @ApiOperation(value = "create", notes = "CREATE_NOTES")
     @PostMapping(value = "/create")
     @ResponseStatus(HttpStatus.CREATED)
     public Result createDataSource() {
@@ -56,7 +56,7 @@ public class ApplicationController extends BaseController {
         return null;
     }
 
-    @ApiOperation(value = "列表", notes = "QUERY_ALERT_GROUP_LIST_NOTES")
+    @ApiOperation(value = "列表", notes = "QUERY_LIST_NOTES")
     @GetMapping(value = "/list")
     @ResponseStatus(HttpStatus.OK)
     public void list() {

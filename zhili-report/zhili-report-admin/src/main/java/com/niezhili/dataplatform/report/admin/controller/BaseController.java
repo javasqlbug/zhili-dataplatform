@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.niezhili.dataplatform.dataservice.admin.controller;
+package com.niezhili.dataplatform.report.admin.controller;
 
 
 import org.slf4j.Logger;

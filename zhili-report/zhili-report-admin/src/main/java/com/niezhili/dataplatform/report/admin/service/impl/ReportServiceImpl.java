@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package com.niezhili.dataplatform.dataservice.admin.service.impl;
+package com.niezhili.dataplatform.report.admin.service.impl;
 
-import com.niezhili.dataplatform.dataservice.admin.service.ApplicationService;
-import com.niezhili.dataplatform.dataservice.dao.entity.Project;
-import com.niezhili.dataplatform.dataservice.dao.mapper.ProjectMapper;
+import com.niezhili.dataplatform.report.dao.entity.Project;
+import com.niezhili.dataplatform.report.dao.mapper.ProjectMapper;
+import com.niezhili.dataplatform.report.admin.service.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
 @Service
-public class ApplicationServiceImpl implements ApplicationService {
+public class ReportServiceImpl implements ReportService {
 
     @Autowired
     private ProjectMapper projectMapper;

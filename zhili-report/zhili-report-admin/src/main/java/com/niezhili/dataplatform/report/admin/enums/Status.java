@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.niezhili.dataplatform.dataservice.admin.enums;
+package com.niezhili.dataplatform.report.admin.enums;
 
 import org.springframework.context.i18n.LocaleContextHolder;
 

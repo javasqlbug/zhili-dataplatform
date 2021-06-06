@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.niezhili.dataplatform.dataservice.dao.datasource;
+package com.niezhili.dataplatform.report.dao.datasource;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -141,7 +141,7 @@ public class SpringConnectionFactory {
         sqlSessionFactoryBean.setGlobalConfig(globalConfig);
         sqlSessionFactoryBean.setTypeAliasesPackage("com.niezhili.dataplatform.report.dao.entity");
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        sqlSessionFactoryBean.setMapperLocations(resolver.getResources("com/niezhili/dataplatform/dataservice/dao/mapper/*Mapper.xml"));
+        sqlSessionFactoryBean.setMapperLocations(resolver.getResources("com/niezhili/dataplatform/report/dao/mapper/*Mapper.xml"));
         sqlSessionFactoryBean.setTypeEnumsPackage("com.niezhili.dataplatform.report.dao.*.enums");
         sqlSessionFactoryBean.setDatabaseIdProvider(databaseIdProvider());
         return sqlSessionFactoryBean.getObject();

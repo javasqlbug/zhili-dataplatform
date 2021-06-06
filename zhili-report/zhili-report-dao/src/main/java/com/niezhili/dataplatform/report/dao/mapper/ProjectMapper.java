@@ -15,13 +15,12 @@
  * limitations under the License.
  */
 
-package com.niezhili.dataplatform.dataservice.dao.mapper;
+package com.niezhili.dataplatform.report.dao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-
-import com.niezhili.dataplatform.dataservice.dao.entity.Project;
-import com.niezhili.dataplatform.dataservice.dao.entity.ProjectUser;
+import com.niezhili.dataplatform.report.dao.entity.Project;
+import com.niezhili.dataplatform.report.dao.entity.ProjectUser;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

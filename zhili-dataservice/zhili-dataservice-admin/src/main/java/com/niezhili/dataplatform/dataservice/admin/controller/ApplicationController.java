@@ -48,7 +48,7 @@ public class ApplicationController extends BaseController {
      *
      * @return create result code
      */
-    @ApiOperation(value = "createDataSource", notes = "CREATE_DATA_SOURCE_NOTES")
+    @ApiOperation(value = "create", notes = "CREATE_NOTES")
     @PostMapping(value = "/create")
     @ResponseStatus(HttpStatus.CREATED)
     public Result createDataSource() {
@@ -56,7 +56,7 @@ public class ApplicationController extends BaseController {
         return null;
     }
 
-    @ApiOperation(value = "列表", notes = "QUERY_ALERT_GROUP_LIST_NOTES")
+    @ApiOperation(value = "列表", notes = "QUERY_LIST_NOTES")
     @GetMapping(value = "/list")
     @ResponseStatus(HttpStatus.OK)
     public void list() {

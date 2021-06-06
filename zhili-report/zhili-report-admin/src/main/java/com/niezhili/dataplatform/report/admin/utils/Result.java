@@ -14,10 +14,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.niezhili.dataplatform.dataservice.admin.utils;
+package com.niezhili.dataplatform.report.admin.utils;
 
 
-import com.niezhili.dataplatform.dataservice.admin.enums.Status;
+import com.niezhili.dataplatform.report.admin.enums.Status;
 
 import java.text.MessageFormat;
 

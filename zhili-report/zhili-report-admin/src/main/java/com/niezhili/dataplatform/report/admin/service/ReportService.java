@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package com.niezhili.dataplatform.dataservice.admin.service;
+package com.niezhili.dataplatform.report.admin.service;
 
-public interface ApplicationService {
+public interface ReportService {
 
     void test();
 }
