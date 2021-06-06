@@ -1,0 +1,12 @@
+server:
+  servlet:
+    context-path: /metadata
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: metadata
+
+logging:
+  config: classpath:logback-admin.xml
