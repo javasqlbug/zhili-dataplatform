@@ -48,7 +48,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("Dolphin Scheduler Api Docs").description("Dolphin Scheduler Api Docs")
+        return new ApiInfoBuilder().title("Zhili Dataplatform DataService Admin Api Docs").description("Zhili Dataplatform DataService Admin Api Docs")
                 .build();
     }
 

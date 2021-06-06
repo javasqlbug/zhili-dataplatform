@@ -22,7 +22,6 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 
 import com.niezhili.dataplatform.dataservice.dao.entity.Project;
 import com.niezhili.dataplatform.dataservice.dao.entity.ProjectUser;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
