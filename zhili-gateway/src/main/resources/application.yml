@@ -1,0 +1,12 @@
+server:
+  servlet:
+    context-path: /gateway
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: gateway
+
+logging:
+  config: classpath:logback-gateway.xml
