@@ -90,23 +90,24 @@ public class AccessLogAspect {
     }
 
     private String parseArgs(ProceedingJoinPoint proceedingJoinPoint, AccessLogAnnotation annotation) {
-        Object[] args = proceedingJoinPoint.getArgs();
-        String argsString = Arrays.toString(args);
-        if (annotation.ignoreRequestArgs().length > 0) {
-            String[] parameterNames = ((MethodSignature) proceedingJoinPoint.getSignature()).getParameterNames();
-            if (parameterNames.length > 0) {
-                List<String> ignoreList = Arrays.stream(annotation.ignoreRequestArgs()).collect(Collectors.toList());
-                HashMap<String, Object> argsMap = new HashMap<>();
-
-                for (int i = 0; i < parameterNames.length; i++) {
-                    if (!ignoreList.contains(parameterNames[i])) {
-                        argsMap.put(parameterNames[i], args[i]);
-                    }
-                }
-                argsString = argsMap.toString();
-            }
-        }
-        return argsString;
+//        Object[] args = proceedingJoinPoint.getArgs();
+//        String argsString = Arrays.toString(args);
+//        if (annotation.ignoreRequestArgs().length > 0) {
+//            String[] parameterNames = ((MethodSignature) proceedingJoinPoint.getSignature()).getParameterNames();
+//            if (parameterNames.length > 0) {
+//                List<String> ignoreList = Arrays.stream(annotation.ignoreRequestArgs()).collect(Collectors.toList());
+//                HashMap<String, Object> argsMap = new HashMap<>();
+//
+//                for (int i = 0; i < parameterNames.length; i++) {
+//                    if (!ignoreList.contains(parameterNames[i])) {
+//                        argsMap.put(parameterNames[i], args[i]);
+//                    }
+//                }
+//                argsString = argsMap.toString();
+//            }
+//        }
+//        return argsString;
+        return null;
     }
 
     private String parseLoginInfo(HttpServletRequest request) {
