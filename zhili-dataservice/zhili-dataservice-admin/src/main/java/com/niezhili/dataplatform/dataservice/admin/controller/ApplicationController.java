@@ -17,8 +17,10 @@
 
 package com.niezhili.dataplatform.dataservice.admin.controller;
 
-import com.niezhili.dataplatform.dataservice.admin.utils.Result;
+import com.niezhili.dataplatform.dataservice.admin.aspect.AccessLogAnnotation;
+import com.niezhili.dataplatform.dataservice.admin.exceptions.ApiException;
 import com.niezhili.dataplatform.dataservice.admin.service.ApplicationService;
+import com.niezhili.dataplatform.dataservice.admin.utils.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
@@ -26,6 +28,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import static com.niezhili.dataplatform.dataservice.admin.enums.Status.CREATE_DATASOURCE_ERROR;
 
 
 /**
@@ -51,6 +55,8 @@ public class ApplicationController extends BaseController {
     @ApiOperation(value = "create", notes = "CREATE_NOTES")
     @PostMapping(value = "/create")
     @ResponseStatus(HttpStatus.CREATED)
+    @ApiException(CREATE_DATASOURCE_ERROR)
+    @AccessLogAnnotation(ignoreRequestArgs = "loginUser")
     public Result createDataSource() {
         applicationService.test();
         return null;
