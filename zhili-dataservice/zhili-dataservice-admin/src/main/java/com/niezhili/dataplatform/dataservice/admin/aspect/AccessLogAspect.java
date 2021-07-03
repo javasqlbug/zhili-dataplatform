@@ -107,7 +107,7 @@ public class AccessLogAspect {
 //            }
 //        }
 //        return argsString;
-        return null;
+        return "测试";
     }
 
     private String parseLoginInfo(HttpServletRequest request) {
