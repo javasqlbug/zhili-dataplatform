@@ -9,3 +9,5 @@
 本着空谈误国，实干兴邦的宗旨，我们利用工作闲暇时间，来一点一点用程序实现我们的梦想。日积月累，坚持就是胜利！
 
 急需产品人员（Axure等）,前端设计人员（sketch等）、前端开发人员（Vue.js等）一起加入进来。
+
+为方便国内用户下载，码云地址：https://gitee.com/javasqlbug/zhili-dataplatform.git
