@@ -5,8 +5,6 @@ server:
 spring:
   profiles:
     active: dev
-  application:
-    name: dataservice
 
 logging:
   config: classpath:logback-admin.xml

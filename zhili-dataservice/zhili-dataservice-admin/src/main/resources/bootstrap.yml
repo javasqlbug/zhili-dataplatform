@@ -1,0 +1,29 @@
+server:
+  servlet:
+    context-path: /dataservice
+
+
+
+logging:
+  config: classpath:logback-admin.xml
+
+# Spring
+spring:
+  profiles:
+    active: dev
+  application:
+    name: dataservice
+  cloud:
+    nacos:
+      discovery:
+        # 服务注册地址
+        server-addr: 127.0.0.1:8848
+#        group: ZHILI_DATAPLATFORM_DEV_GROUP
+#        namespace: 53e6e7f5-d45f-4f84-800c-1d2fedb30ada
+      config:
+        # 配置中心地址
+        server-addr: 127.0.0.1:8848
+        # 配置文件格式
+        file-extension: yml
+#        group: ZHILI_DATAPLATFORM_DEV_GROUP
+#        namespace: 53e6e7f5-d45f-4f84-800c-1d2fedb30ada

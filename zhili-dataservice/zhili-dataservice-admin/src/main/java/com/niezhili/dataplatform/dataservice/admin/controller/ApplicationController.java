@@ -26,6 +26,8 @@ import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,12 +42,24 @@ import static com.niezhili.dataplatform.dataservice.admin.enums.Status.CREATE_DA
 @Api(tags = "应用管理")
 @RestController
 @RequestMapping("application")
+@RefreshScope
 public class ApplicationController extends BaseController {
 
     private static final Logger logger = LoggerFactory.getLogger(ApplicationController.class);
 
     @Autowired
     private ApplicationService applicationService;
+
+    @Value("${user.name}")
+    private String userName;
+
+    @Value("${user.age}")
+    private int age;
+
+    @GetMapping("/getConfigValue")
+    public String getConfigValue() {
+        return userName + age;
+    }
 
     /**
      * create data source

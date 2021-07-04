@@ -31,8 +31,8 @@
     <revision>1.0-SNAPSHOT</revision>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <curator.version>4.3.0</curator.version>
-    <spring.version>5.1.19.RELEASE</spring.version>
-    <spring.boot.version>2.1.18.RELEASE</spring.boot.version>
+    <spring.version>5.3.8</spring.version>
+    <spring.boot.version>2.5.1</spring.boot.version>
     <java.version>1.8</java.version>
     <logback.version>1.2.3</logback.version>
     <quartz.version>2.3.0</quartz.version>
@@ -66,10 +66,38 @@
     <springfox.version>2.9.2</springfox.version>
     <swagger-models.version>1.5.24</swagger-models.version>
     <spring-data-influxdb.version>1.8</spring-data-influxdb.version>
+    <spring-cloud.version>2020.0.3</spring-cloud.version>
+    <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
+    <alibaba.nacos.version>2.0.2</alibaba.nacos.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
+      <!-- SpringCloud 微服务 -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!-- SpringCloud Alibaba 微服务 -->
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>${spring-cloud-alibaba.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!-- Alibaba Nacos 配置 -->
+      <dependency>
+        <groupId>com.alibaba.nacos</groupId>
+        <artifactId>nacos-client</artifactId>
+        <version>${alibaba.nacos.version}</version>
+      </dependency>
+
       <dependency>
         <groupId>com.baomidou</groupId>
         <artifactId>mybatis-plus-boot-starter</artifactId>
@@ -287,6 +315,14 @@
 
     </dependencies>
   </dependencyManagement>
+
+  <dependencies>
+    <!-- bootstrap 启动器 -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-bootstrap</artifactId>
+    </dependency>
+  </dependencies>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
