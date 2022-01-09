@@ -15,7 +15,7 @@
     <module>zhili-metadata</module>
     <module>zhili-dataservice</module>
     <module>zhili-common</module>
-    <module>zhili-register</module>
+    <module>zhili-safe</module>
     <module>zhili-collect</module>
     <module>zhili-ui</module>
     <module>zhili-report</module>
