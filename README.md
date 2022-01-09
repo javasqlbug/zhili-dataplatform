@@ -13,3 +13,5 @@
 ## zhili-dataplatform数据中台总体架构
 
 见同目录zhili-dataplatform.jpg
+
+为方便国内用户下载，码云地址：https://gitee.com/javasqlbug/zhili-dataplatform.git
