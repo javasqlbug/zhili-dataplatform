@@ -10,4 +10,6 @@
 
 急需产品人员（Axure等）,前端设计人员（sketch等）、前端开发人员（Vue.js等）一起加入进来。
 
-为方便国内用户下载，码云地址：https://gitee.com/javasqlbug/zhili-dataplatform.git
+## zhili-dataplatform数据中台总体架构
+
+见同目录zhili-dataplatform.jpg
