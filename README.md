@@ -15,3 +15,15 @@
 见同目录zhili-dataplatform.jpg
 
 为方便国内用户下载，码云地址：https://gitee.com/javasqlbug/zhili-dataplatform.git
+
+## zhili-dataplatform数据中台技术架构
+
+Java后端使用目前主流Spring Gateway + Spring Cloud Alibaba + Mybatis的Java微服务架构,
+数据库使用Mysql，缓存使用Redis,注册中心使用Nacos,
+底层大数据平台使用Hadoop、Hive、Spark、Flink、HBase等，统一权限底层组件使用Ranger，
+前端使用Vue.js，前后端代码分离。
+
+## zhili-dataplatform数据中台 Go语言版
+目前云原生概念越来越火，Java在大数据生态有越来越被Go超越的趋势，未来将会是Go语言的天下。
+云原生基本都是Go生态，后续将会提供zhili-dataplatfrom-go工程，
+将会采用k8s+istio主流Go云原生微服务网格架构开发和部署，敬请期待！
