@@ -10,10 +10,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.niezhili</groupId>
-  <artifactId>zhili-register</artifactId>
+  <artifactId>zhili-safe</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>zhili-register</name>
+  <name>zhili-safe</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
