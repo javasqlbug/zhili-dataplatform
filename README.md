@@ -19,8 +19,9 @@
 ## zhili-dataplatform数据中台技术架构
 
 Java后端使用目前主流Spring Cloud Gateway + Spring Cloud Alibaba + Mybatis的Java微服务架构,
-数据库使用Mysql，缓存使用Redis,注册中心使用Nacos,
+数据库使用Mysql，缓存使用Redis,注册中心和配置中心使用Nacos,
 底层大数据平台使用Hadoop、Hive、Spark、Flink、HBase等，统一权限底层组件使用Ranger，
+账号体系先写入Mysql，最终使用OpenLDAP，底层大数据组件认证以OpenLDAP为中心，
 前端使用Vue.js，前后端代码分离。
 
 ## zhili-dataplatform数据中台(Go语言版)
