@@ -31,85 +31,52 @@
       <scope>test</scope>
     </dependency>
 
-    <!--springboot-->
+    <!-- SpringCloud Gateway -->
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-starter-tomcat</artifactId>
-        </exclusion>
-        <exclusion>
-          <artifactId>log4j-to-slf4j</artifactId>
-          <groupId>org.apache.logging.log4j</groupId>
-        </exclusion>
-      </exclusions>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-gateway</artifactId>
     </dependency>
 
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-    </dependency>
-
-    <!-- use jetty -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-jetty</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>org.eclipse.jetty.websocket</groupId>
-          <artifactId>javax-websocket-server-impl</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.eclipse.jetty.websocket</groupId>
-          <artifactId>websocket-server</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
-    <!-- 从aliyun下载报错，网上说是阿里云库关于spring cloud的依赖不全，看是否切成spring cloud alibaba -->
-
+    <!-- SpringCloud Alibaba Nacos -->
 <!--    <dependency>-->
-<!--      <groupId>org.springframework.cloud</groupId>-->
-<!--      <artifactId>spring-cloud-starter-zuul</artifactId>-->
-<!--      <exclusions>-->
-<!--        <exclusion>-->
-<!--          <groupId>org.ow2.asm</groupId>-->
-<!--          <artifactId>asm</artifactId>-->
-<!--        </exclusion>-->
-<!--      </exclusions>-->
+<!--      <groupId>com.alibaba.cloud</groupId>-->
+<!--      <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
 <!--    </dependency>-->
 
+    <!-- SpringCloud Alibaba Nacos Config -->
+<!--    <dependency>-->
+<!--      <groupId>com.alibaba.cloud</groupId>-->
+<!--      <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+<!--    </dependency>-->
+
+    <!-- SpringCloud Alibaba Sentinel -->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+    </dependency>
+
+    <!-- SpringCloud Alibaba Sentinel Gateway -->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-alibaba-sentinel-gateway</artifactId>
+    </dependency>
+
+    <!-- Sentinel Datasource Nacos -->
+<!--    <dependency>-->
+<!--      <groupId>com.alibaba.csp</groupId>-->
+<!--      <artifactId>sentinel-datasource-nacos</artifactId>-->
+<!--    </dependency>-->
+
+    <!-- SpringBoot Actuator -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-aop</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-starter</artifactId>
-        </exclusion>
-      </exclusions>
+      <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
 
+    <!-- Java Servlet -->
     <dependency>
-      <groupId>io.springfox</groupId>
-      <artifactId>springfox-swagger2</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>io.springfox</groupId>
-      <artifactId>springfox-swagger-ui</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>io.swagger</groupId>
-      <artifactId>swagger-models</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.github.xiaoymin</groupId>
-      <artifactId>swagger-bootstrap-ui</artifactId>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
     </dependency>
   </dependencies>
 

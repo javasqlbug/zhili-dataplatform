@@ -29,10 +29,8 @@ import org.springframework.context.annotation.FilterType;
  * @date 2021-06-20
  */
 @SpringBootApplication
-//@EnableZuulProxy
-@ServletComponentScan
 @ComponentScan(value = "com.niezhili.dataplatform",
-        excludeFilters = @ComponentScan.Filter(type = FilterType.REGEX, pattern = "org.apache.dolphinscheduler.server.*"))
+        excludeFilters = @ComponentScan.Filter(type = FilterType.REGEX, pattern = "com.niezhili.dataplatform.*"))
 public class ZhiliGatewayApplicationServer extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
