@@ -1,20 +1,18 @@
 package com.niezhili.dataplatform.common.utils;
 
-import java.util.Base64;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
-
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
+import java.util.Base64;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 //import org.apache.tomcat.util.codec.binary.Base64;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 /**
  * 认证采用JWT认证
@@ -105,19 +103,23 @@ public class JwtUtils {
 
     public static void main(String[] args) {
         // 生成token
-        String s = generateToken("111", 20);
-        System.out.println(s);
+        String token = generateToken("111", 20);
+        System.out.println(token);
 
-        // 验证
-        String token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMTEiLCJvcGVuSWQiOiIxMTEiLCJleHAiOjE2NTk3NjgxOTQsInVzZXJJZCI6MjAsImlhdCI6MTY1OTc2NTYwMiwianRpIjoidG9rZW5JZCJ9.KUNC8EHYU0zKhe36DYPudiGMPCK-DGk68dkVkR4ROeY";
         Claims claims = verifyJwt(token);
         String subject = claims.getSubject();
         String userId = Integer.toString((Integer) claims.get("userId"));
         String openId = (String)claims.get("openId");
         String sub = (String)claims.get("sub");
+        //签发时间
+        Date issuedAt = claims.getIssuedAt();
+        //失效时间
+        Date expiration = claims.getExpiration();
         System.out.println("subject:" + subject);
         System.out.println("userId:" + userId);
         System.out.println("openId:" + openId);
         System.out.println("sub:" + sub);
+        System.out.println("issuedAt:" + issuedAt);
+        System.out.println("expiration:" + expiration);
     }
 }
